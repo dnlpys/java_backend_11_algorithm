@@ -33,8 +33,19 @@ public class Main4 {
 
 	private static String solution(String str) {
 		String answer = "";
+//		System.out.println(str.charAt(0));//a
+//		System.out.println(str.charAt(str.length()-1));//g
 		
-		answer = str;
+//		for (int i = str.length()-1; i >= 0; i--) {
+//			answer += str.charAt(i);
+//		}
+		
+		answer = new StringBuffer(str).reverse().toString();
+		
+//		char[] cs = str.toCharArray();
+//		for (int i = str.length() - 1; i >= 0; i--) {
+//			answer += cs[i];
+//		}
 		
 		return answer;
 	}

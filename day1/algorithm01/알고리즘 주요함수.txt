@@ -4,7 +4,32 @@
 문자열 추출 : str.subString(3)
 문자열 추출 : str.subString(3,5)
 문자열 위치 : str.indexOf("c")
+문자열 한글자뽑기 : str.charAt(0)
+문자열 뒤집기 : new StringBuffer(str).reverse().toString();
+문자열 char[] : str.toCharArray();
 
+정수 제곱 : (int)Math.pow(su, 2);
+문자열 정수 변환 : Integer.parseInt("10")
+기본타입 문자열 변화 : String.valueOf(10),String.valueOf('3')
+정수를 2진수,8진수,10진수 문자열 변환 : 
+Integer.toString(sum);//26
+Integer.toString(sum,2);//11010 16+8+2
+Integer.toString(sum,8);//32  3*8+2
 
+큰수,큰정수 : BigInteger big = new BigInteger("26");
+			big = BigInteger.valueOf(26);
+문자열 구분자 >> 문자열배열	:	String[] arr = str.split(" ");
+문자열배열 구분자 문자열 : String answer = String.join(" ", arr);
 
+배열 출력 : System.out.println(Arrays.toString(sus));
+
+배열 순정렬 : 	Arrays.sort(sus);
+배열 뒤집기: List<String> list = Arrays.asList(arr);
+		Collections.reverse(list);
+순정렬 후에 뒤집기 사용하면 역정렬이됨.
+
+//스트림 사용 문자열배열 >> 정수배열
+		int[] sus = Arrays.stream(arr).mapToInt(Integer::parseInt).toArray();
+//스트림 사용 정수배열 문자열배열 
+		arr = Arrays.stream(sus).mapToObj(String::valueOf).toArray(String[]::new);
 
