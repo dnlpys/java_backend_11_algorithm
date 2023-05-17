@@ -1,0 +1,10 @@
+알고리즘 주요함수
+
+문자열 길이 : str.length()
+문자열 추출 : str.subString(3)
+문자열 추출 : str.subString(3,5)
+문자열 위치 : str.indexOf("c")
+
+
+
+
