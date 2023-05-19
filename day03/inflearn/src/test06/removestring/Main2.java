@@ -1,8 +1,11 @@
 package test06.removestring;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class Main2 {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
@@ -15,14 +18,11 @@ public class Main {
 	private static String solution(String str) {
 		String answer = "";
 
-		//1.반복문으로 문자열을 반복
-		for (int i = 0; i < str.length(); i++) {
-			//2.문자의 위치가 인덱스의 위치와 다르면 중복된것
-			System.out.println(str.indexOf(str.charAt(i)) +","+i);
-			if(str.indexOf(str.charAt(i)) == i) {
-				answer += str.charAt(i);
-			}
-		}
+		//스트림으로 해보세요
+		//스트림에 오라클 중복배제와 같은 함수가 있다.
+		List<String> list = new ArrayList<String>(Arrays.asList(str.split("")));
+		
+		answer = list.stream().distinct().reduce("", String::concat);
 		
 		return answer;
 	}
